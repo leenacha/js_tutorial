@@ -1,4 +1,4 @@
-// Reverses a string including emojis.
+// Reverses a string (including emojis).
 function reverse(string) {
   return Array.from(string).reverse().join("")
 }
@@ -12,4 +12,30 @@ function palindrome(string) {
 // Returns an array of the username and domain for a standard email address.
 function emailParts(email) {
   return email.toLowerCase().split("@");
+}
+
+// Moving 'palindrome` into a method.
+
+// Defines a Phrase object.
+function Phrase(content) {
+  this.content = content;
+
+  // Returns true if the phrase is a palindrome, false otherwise.
+  this.palindrome = function palindrome() {
+    let processedContent = this.content.toLowerCase();
+    return processedContent === reverse(processedContent);
+  };
+}
+
+// Making the content LOUDER
+
+// Defines a Phrase object.
+function Phrase(content) {
+  this.content = content;
+
+  // Makes the phrase LOUDER.
+  this.louder = function palindrome() {
+    let processedContent = this.content.toUpperCase();
+    return processedContent;
+  };
 }
