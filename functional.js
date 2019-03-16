@@ -121,3 +121,9 @@ function functionalLengths(elements) {
                         }, {});
 }
 console.log(functionalLengths(states));
+
+// A `reduce` function that returns the product of all the elements in an array
+function functionalProduct(elements) {
+  return elements.reduce((total, n) => { return total *= n; });
+}
+console.log(functionalProduct(numbers));
