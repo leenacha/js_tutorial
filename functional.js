@@ -2,7 +2,7 @@
 let states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"];
 
 // Map
-// ...a function over an array of elements; a powerful alternative to looping
+// applies the same function to every element in an array; alternative to looping
 
 // Returns a URL-friendly version of a string.
 function urlify(string) {
@@ -44,7 +44,7 @@ function functionalFullUrls(elements) {
 console.log(functionalFullUrls(states));
 
 Filter
-...data based on some boolean criterion
+//...data based on some boolean criterion
 
 // Solving a filtering problem imperatively.
 function imperativeSingles(elements) {
@@ -66,7 +66,7 @@ console.log(functionalSingles(states));
 
 // A filter function returns the Dakotas using String#includes.
 function stringDakotas(elements) {
-  return elements.filter(element => states.includes("Dakota"));
+  return elements.filter(element => element.includes("Dakota"));
 }
 console.log(stringDakotas(states));
 
@@ -77,7 +77,7 @@ function regexDakotas(elements) {
 console.log(regexDakotas(states));
 
 Reduce
-...or takes the elements of an array and process (reduce) them based on some operation, or accumulate results and store them in the first argument.
+//...or take the elements of an array and process (reduce) them based on some operation, or accumulate results and store them in the first argument.
 
 // An imperative solution for summing integers.
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
