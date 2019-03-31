@@ -43,3 +43,4 @@ Topics covered include:
 
   Prototypes  
   Modifying native objects
+# palindrome_tester
