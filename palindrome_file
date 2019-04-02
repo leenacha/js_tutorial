@@ -1,0 +1,20 @@
+#!/usr/local/bin/node
+
+let fs = require("fs");
+let Phrase = require("leenacha-palindrome");
+
+let detected = [];
+
+let text = fs.readFileSync("phrases.txt", "utf-8");
+text.split("\n").forEach(function(line){
+  let phrase = new Phrase(line);
+  if (phrase.palindrome()) {
+    detected.push(line);
+  }
+});
+console.log(detected);
+
+fs.writeFile('/Users/leenac/repos/js_tutorial/palindromes.txt', detected.join("\n"),(err) => {
+    if(err) throw err;
+    console.log('The file of detected palindromes has been saved.');
+  });

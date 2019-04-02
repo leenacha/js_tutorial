@@ -1,6 +1,6 @@
 let Phrase = require("leenacha-palindrome");
 
-function palindromeTester() {
+function palindromeTester(event) {
   event.preventDefault();
   let phrase = new Phrase(event.target.phrase.value);
   let palindromeResult = document.querySelector("#palindromeResult");
