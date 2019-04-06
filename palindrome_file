@@ -3,18 +3,43 @@
 let fs = require("fs");
 let Phrase = require("leenacha-palindrome");
 
-let detected = [];
+// .forEach version 1
+// let detected = [];
+//
+// let text = fs.readFileSync("phrases.txt", "utf-8");
+// text.split("\n").forEach(function(line){
+//   let phrase = new Phrase(line);
+//   if (phrase.palindrome()) {
+//     detected.push(line);
+//   }
+// });
+// console.log(detected);
 
-let text = fs.readFileSync("phrases.txt", "utf-8");
-text.split("\n").forEach(function(line){
-  let phrase = new Phrase(line);
-  if (phrase.palindrome()) {
-    detected.push(line);
-  }
-});
-console.log(detected);
+// .forEach version 2
+// function isPalindrome(text) {
+//   let j = new Phrase(text);
+//   return j.palindrome();
+// }
 
-fs.writeFile('/Users/leenac/repos/js_tutorial/palindromes.txt', detected.join("\n"),(err) => {
-    if(err) throw err;
-    console.log('The file of detected palindromes has been saved.');
-  });
+// let detected = [];
+//
+// text.split("\n").forEach(isPalindrome(j){
+//     detected.push(j);
+//   });
+// console.log(detected);
+
+// filter version
+function isPalindrome(text) {
+  let j = new Phrase(text);
+  return j.palindrome();
+}
+
+function detectedP(j) {
+  return j.filter(j => j.isPalindrome());
+}
+console.log(detectedP(j));
+
+// fs.writeFile('/Users/leenac/repos/js_tutorial/palindromes.txt', detected.join("\n"),(err) => {
+//     if(err) throw err;
+//     console.log('The file of detected palindromes has been saved.');
+//   });
